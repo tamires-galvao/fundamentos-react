@@ -7,7 +7,7 @@ import { Sidebar } from './components/Sidebar'
 export function App() {
   return (
     <div>
-      <Header/>
+     <Header/>
      <div className={styles.wrapper}>
       <Sidebar />
       <main>
