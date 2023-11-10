@@ -3,11 +3,12 @@ export function Post() {
   return(
     <article className={styles.post}>
       <header>
-        <div className={styles.author}></div>
-        <img className={styles.avatar} src='https://github.com/tamires-galvao.png'/>
-        <div className={styles.authorInfor}>
-          <strong>Tamires Moreno</strong>
-          <span>Full Stack Developer</span>
+        <div className={styles.author}>
+          <img className={styles.avatar} src='https://github.com/tamires-galvao.png'/>
+          <div className={styles.authorInfo}>
+            <strong>Tamires Moreno</strong>
+            <span>Full Stack Developer</span>
+          </div>
         </div>
         <time tile='01 de Novembro ás 20:33' dateTime='2023-11-01 20:32:00'>Publicado há 1h</time>
       </header>
@@ -19,9 +20,13 @@ export function Post() {
             Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return,  evento da Rocketseat. O nome do projeto é DoctorCare 🚀
           </p>
           <p>
-            👉 <a href=''>jane.design/doctorcare</a>
+            <a href=''>jane.design/doctorcare</a>
           </p>
-          <p><a href=''>#novoprojeto #nlw #rocketseat</a></p>
+          <p>
+            <a href=''>#novoprojeto</a>{' '}
+            <a href=''>#nlw</a>{' '}
+            <a href=''>#rocketseat</a>{' '}
+            </p>
       </div>
     </article>
   )
