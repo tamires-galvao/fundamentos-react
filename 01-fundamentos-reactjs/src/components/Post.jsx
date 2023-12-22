@@ -10,7 +10,7 @@ export function Post() {
             <span>Full Stack Developer</span>
           </div>
         </div>
-        <time tile='01 de Novembro ás 20:33' dateTime='2023-11-01 20:32:00'>Publicado há 1h</time>
+        <time title='01 de Novembro ás 20:33' dateTime='2023-11-01 20:32:00'>Publicado há 1h</time>
       </header>
       <div className={styles.content}>
           <p>
@@ -28,6 +28,16 @@ export function Post() {
             <a href=''>#rocketseat</a>{' '}
             </p>
       </div>
+
+      <form className={styles.commentForm}>
+        <strong>Deixe seu feedback</strong>
+        <textarea
+          placeholder='Deixe um comentário'
+        />
+        <footer>
+          <button type='submit'>Publicar</button>
+        </footer>
+      </form>
     </article>
   )
 }
