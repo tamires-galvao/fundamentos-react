@@ -4,6 +4,37 @@ import { Sidebar } from './components/Sidebar'
 import styles from './App.module.css'
 import './global.css'
 
+const posts = [
+  {
+    id: 1,
+    author:{
+      avatarUrl: 'https://github.com/tamires-galvao.png',
+      name: 'Tamires Moreno',
+      role: 'Full Stack Developer'
+    },
+    content: [
+      {type: 'paragraph', content: 'Fala galeraa 👋'},
+      {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return,  evento da Rocketseat. O nome do projeto é DoctorCare 🚀 👋'},
+      {type: 'link', content: 'jane.design/doctorcare'},
+    ],
+    publishedAt: new Date('2023-12-26 19:19:00'),
+  },
+  {
+    id: 2,
+    author:{
+      avatarUrl: 'https://github.com/devjleonardo.png',
+      name: 'Zé',
+      role: 'Java Developer'
+    },
+    content: [
+      {type: 'paragraph', content: 'Fala galeraa 👋'},
+      {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return,  evento da Rocketseat. O nome do projeto é DoctorCare 🚀 👋'},
+      {type: 'link', content: 'jane.design/doctorcare'},
+    ],
+    publishedAt: new Date('2023-12-28 19:19:00'),
+  },
+];
+
 export function App() {
   return (
     <div>
@@ -11,15 +42,9 @@ export function App() {
      <div className={styles.wrapper}>
       <Sidebar />
       <main>
-        <Post
-          author="Tamires Moreno"
-          content= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-        />
-
-        <Post
-          author="Kamila Bordin"
-          content= "Um novo Post Legal"
-        />
+        {posts.map(post => {
+          return <Post/>
+        })}
       </main>
      </div>
     </div>
